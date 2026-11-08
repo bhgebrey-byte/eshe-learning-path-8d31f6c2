@@ -1,0 +1,1863 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>E She Learning Path Dashboard</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="E She Learning Path Dashboard" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;E She Learning Path Dashboard&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;eshe-learning-dashboard&quot;&gt;
+  &lt;style&gt;
+    #eshe-learning-dashboard {
+      --lp-blue: #0b5bd3;
+      --lp-blue-dark: #063b8f;
+      --lp-blue-soft: #eaf3ff;
+      --lp-blue-pale: #f5f9ff;
+      --lp-ink: #10233f;
+      --lp-muted: #62728a;
+      --lp-line: #d9e5f5;
+      --lp-white: #ffffff;
+      color: var(--lp-ink);
+      background: var(--lp-white);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;
+      border: 1px solid var(--lp-line);
+      border-radius: 22px;
+      overflow: hidden;
+      min-width: 0;
+    }
+    #eshe-learning-dashboard * { box-sizing: border-box; }
+    #eshe-learning-dashboard button,
+    #eshe-learning-dashboard a { font: inherit; }
+    #eshe-learning-dashboard button { cursor: pointer; }
+    .lp-topbar {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 22px;
+      color: var(--lp-white);
+      background: var(--lp-blue-dark);
+    }
+    .lp-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .lp-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 12px;
+      color: var(--lp-blue-dark);
+      background: var(--lp-white);
+    }
+    .lp-brand-copy { min-width: 0; }
+    .lp-brand-title { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.2; }
+    .lp-brand-subtitle { margin: 3px 0 0; opacity: .76; font-size: 12px; }
+    .lp-persona-switch { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .lp-persona-switch button {
+      min-height: 36px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 10px;
+      color: var(--lp-white);
+      background: transparent;
+      font-weight: 650;
+      font-size: 12px;
+    }
+    .lp-persona-switch button[aria-pressed=&quot;true&quot;] { color: var(--lp-blue-dark); background: var(--lp-white); }
+    .lp-discovery {
+      display: grid;
+      grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      padding: 14px 22px;
+      background: var(--lp-white);
+      border-bottom: 1px solid var(--lp-line);
+    }
+    .lp-search { position: relative; }
+    .lp-search &gt; i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--lp-muted); pointer-events: none; }
+    .lp-search input {
+      width: 100%;
+      min-height: 42px;
+      padding: 10px 12px 10px 38px;
+      border: 1px solid var(--lp-line);
+      border-radius: 11px;
+      color: var(--lp-ink);
+      background: var(--lp-blue-pale);
+      font-size: 16px;
+    }
+    .lp-search input::placeholder { color: var(--lp-muted); }
+    .lp-topic-tabs { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .lp-topic-tabs button {
+      min-height: 36px;
+      padding: 8px 11px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      color: var(--lp-muted);
+      background: transparent;
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .lp-topic-tabs button:hover { color: var(--lp-blue-dark); background: var(--lp-blue-pale); }
+    .lp-topic-tabs button[aria-pressed=&quot;true&quot;] { color: var(--lp-blue-dark); border-color: var(--lp-line); background: var(--lp-blue-soft); }
+    .lp-shell { display: grid; grid-template-columns: 252px minmax(0,1fr); min-height: 620px; }
+    .lp-sidebar { padding: 22px 14px; background: var(--lp-blue-pale); border-right: 1px solid var(--lp-line); }
+    .lp-sidebar-label { margin: 0 8px 10px; color: var(--lp-muted); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .lp-path-nav { display: grid; gap: 6px; }
+    .lp-path-button {
+      width: 100%;
+      padding: 11px 12px;
+      display: grid;
+      grid-template-columns: 34px minmax(0,1fr);
+      gap: 10px;
+      align-items: start;
+      border: 0;
+      border-radius: 12px;
+      color: var(--lp-ink);
+      background: transparent;
+      text-align: left;
+    }
+    .lp-path-button:hover { background: var(--lp-blue-soft); }
+    .lp-path-button[aria-current=&quot;page&quot;] { color: var(--lp-blue-dark); background: var(--lp-white); box-shadow: 0 5px 18px rgba(11,91,211,.10); }
+    .lp-path-code { color: var(--lp-blue); font-size: 11px; font-weight: 800; line-height: 1.45; }
+    .lp-path-name { font-size: 13px; font-weight: 680; line-height: 1.35; }
+    .lp-main { padding: 28px; min-width: 0; }
+    .lp-eyebrow { margin: 0 0 8px; color: var(--lp-blue); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .lp-title { max-width: 760px; margin: 0; color: var(--lp-blue-dark); font-size: clamp(26px, 4vw, 40px); line-height: 1.08; letter-spacing: -.025em; }
+    .lp-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 12px 0 0; color: var(--lp-muted); font-size: 13px; }
+    .lp-meta span { display: inline-flex; align-items: center; gap: 7px; }
+    .lp-stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin: 24px 0; }
+    .lp-stat { padding: 15px 16px; border-radius: 14px; background: var(--lp-blue-pale); }
+    .lp-stat strong { display: block; color: var(--lp-blue-dark); font-size: 22px; line-height: 1.1; }
+    .lp-stat span { display: block; margin-top: 4px; color: var(--lp-muted); font-size: 12px; }
+    .lp-progress-wrap { margin-bottom: 24px; }
+    .lp-progress-label { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; color: var(--lp-muted); font-size: 12px; }
+    .lp-progress { height: 8px; overflow: hidden; border-radius: 999px; background: var(--lp-blue-soft); }
+    .lp-progress &gt; span { display: block; height: 100%; width: 0; border-radius: inherit; background: var(--lp-blue); transition: width .25s ease; }
+    .lp-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+    .lp-toolbar h2 { margin: 0; color: var(--lp-blue-dark); font-size: 18px; }
+    .lp-view-switch { display: flex; gap: 6px; padding: 4px; border-radius: 11px; background: var(--lp-blue-pale); }
+    .lp-view-switch button { min-height: 34px; padding: 7px 11px; border: 0; border-radius: 8px; color: var(--lp-muted); background: transparent; font-size: 12px; font-weight: 750; }
+    .lp-view-switch button[aria-pressed=&quot;true&quot;] { color: var(--lp-blue-dark); background: var(--lp-white); box-shadow: 0 2px 8px rgba(11,91,211,.12); }
+    .lp-list { display: grid; gap: 10px; }
+    .lp-item {
+      display: grid;
+      grid-template-columns: 42px minmax(0,1fr) auto;
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+      border: 1px solid var(--lp-line);
+      border-radius: 15px;
+      background: var(--lp-white);
+      transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+    }
+    .lp-item:hover { border-color: #a8c9f3; box-shadow: 0 7px 20px rgba(11,91,211,.08); transform: translateY(-1px); }
+    .lp-item.is-complete { background: var(--lp-blue-pale); }
+    .lp-check {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--lp-line);
+      border-radius: 10px;
+      color: var(--lp-blue);
+      background: var(--lp-white);
+    }
+    .lp-check[aria-pressed=&quot;true&quot;] { color: var(--lp-white); border-color: var(--lp-blue); background: var(--lp-blue); }
+    .lp-item-type { margin: 0 0 4px; color: var(--lp-blue); font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    .lp-item-path { display: inline-block; margin-left: 8px; color: var(--lp-muted); font-weight: 700; letter-spacing: 0; text-transform: none; }
+    .lp-item h3 { margin: 0; color: var(--lp-ink); font-size: 16px; line-height: 1.3; }
+    .lp-item-summary { margin: 7px 0 0; color: var(--lp-muted); font-size: 13px; line-height: 1.5; }
+    .lp-item-duration { white-space: nowrap; color: var(--lp-muted); font-size: 12px; font-weight: 700; }
+    .lp-item-actions { grid-column: 2 / -1; display: none; padding-top: 12px; border-top: 1px solid var(--lp-line); }
+    .lp-item.is-open .lp-item-actions { display: block; }
+    .lp-detail { display: grid; gap: 8px; margin-bottom: 12px; color: var(--lp-muted); font-size: 12px; line-height: 1.45; }
+    .lp-detail strong { color: var(--lp-ink); }
+    .lp-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lp-link, .lp-more {
+      min-height: 34px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      border-radius: 9px;
+      font-size: 12px;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .lp-link { color: var(--lp-white); background: var(--lp-blue); }
+    .lp-more { border: 1px solid var(--lp-line); color: var(--lp-blue-dark); background: var(--lp-white); }
+    .lp-empty { padding: 32px 18px; color: var(--lp-muted); text-align: center; background: var(--lp-blue-pale); border-radius: 14px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @media (pointer: coarse) {
+      .lp-topic-tabs button, .lp-persona-switch button, .lp-view-switch button { min-height: 44px; }
+    }
+    @media (max-width: 760px) {
+      .lp-topbar { align-items: flex-start; flex-direction: column; }
+      .lp-persona-switch { justify-content: flex-start; }
+      .lp-discovery { grid-template-columns: 1fr; }
+      .lp-topic-tabs { justify-content: flex-start; }
+      .lp-shell { grid-template-columns: 1fr; }
+      .lp-sidebar { border-right: 0; border-bottom: 1px solid var(--lp-line); }
+      .lp-path-nav { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .lp-main { padding: 22px 18px; }
+    }
+    @media (max-width: 500px) {
+      .lp-path-nav, .lp-stats { grid-template-columns: 1fr; }
+      .lp-item { grid-template-columns: 42px minmax(0,1fr); }
+      .lp-item-duration { grid-column: 2; }
+      .lp-item-actions { grid-column: 1 / -1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .lp-progress &gt; span, .lp-item { transition: none; }
+    }
+  &lt;/style&gt;
+
+  &lt;header class=&quot;lp-topbar&quot;&gt;
+    &lt;div class=&quot;lp-brand&quot;&gt;
+      &lt;div class=&quot;lp-mark&quot;&gt;&lt;i data-lucide=&quot;route&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;div class=&quot;lp-brand-copy&quot;&gt;
+        &lt;p class=&quot;lp-brand-title&quot;&gt;e-SHE Learning Paths&lt;/p&gt;
+        &lt;p class=&quot;lp-brand-subtitle&quot;&gt;Webinar-based professional learning&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;lp-persona-switch&quot; aria-label=&quot;Audience filter&quot;&gt;
+      &lt;button type=&quot;button&quot; data-persona=&quot;all&quot; aria-pressed=&quot;true&quot;&gt;All paths&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-persona=&quot;faculty&quot; aria-pressed=&quot;false&quot;&gt;Faculty &amp;amp; IDs&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-persona=&quot;leaders&quot; aria-pressed=&quot;false&quot;&gt;University leaders&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;section class=&quot;lp-discovery&quot; aria-label=&quot;Find courses&quot;&gt;
+    &lt;label class=&quot;lp-search&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Search courses&lt;/span&gt;
+      &lt;i data-lucide=&quot;search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;input id=&quot;lp-search-input&quot; type=&quot;search&quot; placeholder=&quot;Search course titles and summaries&quot; autocomplete=&quot;off&quot;&gt;
+    &lt;/label&gt;
+    &lt;div class=&quot;lp-topic-tabs&quot; aria-label=&quot;Topics&quot;&gt;
+      &lt;button type=&quot;button&quot; data-topic=&quot;all&quot; aria-pressed=&quot;true&quot;&gt;All topics&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-topic=&quot;design&quot; aria-pressed=&quot;false&quot;&gt;Course design&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-topic=&quot;assessment&quot; aria-pressed=&quot;false&quot;&gt;Assessment&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-topic=&quot;platform&quot; aria-pressed=&quot;false&quot;&gt;e-SHE platform&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-topic=&quot;media&quot; aria-pressed=&quot;false&quot;&gt;Instructional media&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-topic=&quot;ai-teaching&quot; aria-pressed=&quot;false&quot;&gt;AI for teaching&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-topic=&quot;programs&quot; aria-pressed=&quot;false&quot;&gt;Online programs&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-topic=&quot;ai-leadership&quot; aria-pressed=&quot;false&quot;&gt;AI leadership&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;div class=&quot;lp-shell&quot;&gt;
+    &lt;aside class=&quot;lp-sidebar&quot; aria-label=&quot;Learning paths&quot;&gt;
+      &lt;p class=&quot;lp-sidebar-label&quot;&gt;Choose a path&lt;/p&gt;
+      &lt;nav class=&quot;lp-path-nav&quot; id=&quot;lp-path-nav&quot;&gt;&lt;/nav&gt;
+    &lt;/aside&gt;
+
+    &lt;main class=&quot;lp-main&quot;&gt;
+      &lt;p class=&quot;lp-eyebrow&quot; id=&quot;lp-path-code&quot;&gt;&lt;/p&gt;
+      &lt;h1 class=&quot;lp-title&quot; id=&quot;lp-title&quot;&gt;&lt;/h1&gt;
+      &lt;div class=&quot;lp-meta&quot; id=&quot;lp-meta&quot;&gt;&lt;/div&gt;
+
+      &lt;section class=&quot;lp-stats&quot; id=&quot;lp-stats&quot; aria-label=&quot;Path summary&quot;&gt;
+        &lt;div class=&quot;lp-stat&quot;&gt;&lt;strong id=&quot;lp-core-count&quot;&gt;0&lt;/strong&gt;&lt;span&gt;Core webinars&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;lp-stat&quot;&gt;&lt;strong id=&quot;lp-time&quot;&gt;—&lt;/strong&gt;&lt;span&gt;Listed core time&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;lp-stat&quot;&gt;&lt;strong id=&quot;lp-resource-count&quot;&gt;0&lt;/strong&gt;&lt;span&gt;Optional and proposed&lt;/span&gt;&lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lp-progress-wrap&quot; id=&quot;lp-progress-wrap&quot; aria-label=&quot;Completion progress&quot;&gt;
+        &lt;div class=&quot;lp-progress-label&quot;&gt;&lt;span&gt;Your core progress&lt;/span&gt;&lt;strong id=&quot;lp-progress-copy&quot;&gt;0 of 0 complete&lt;/strong&gt;&lt;/div&gt;
+        &lt;div class=&quot;lp-progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Core learning path progress&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; aria-valuenow=&quot;0&quot;&gt;&lt;span id=&quot;lp-progress-bar&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;div class=&quot;lp-toolbar&quot;&gt;
+        &lt;h2 id=&quot;lp-list-heading&quot;&gt;Learning sequence&lt;/h2&gt;
+        &lt;div class=&quot;lp-view-switch&quot; id=&quot;lp-view-switch&quot; aria-label=&quot;Resource view&quot;&gt;
+          &lt;button type=&quot;button&quot; data-view=&quot;core&quot; aria-pressed=&quot;true&quot;&gt;Core path&lt;/button&gt;
+          &lt;button type=&quot;button&quot; data-view=&quot;all&quot; aria-pressed=&quot;false&quot;&gt;All resources&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;lp-list&quot; id=&quot;lp-list&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+    &lt;/main&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    (() =&gt; {
+      const sourceRows = [{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Optional (before step 1)&quot;,&quot;title&quot;:&quot;Check and Build Your Digital Skills for Online Teaching&quot;,&quot;summary&quot;:&quot;Check your own digital skills for online teaching with a global framework (IC3). Learn simple ways to build skills and solve common technical problems.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~47 min (est.; breakouts not transcribed)&quot;,&quot;video&quot;:&quot;https://bit.ly/DigitalCompetency_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/DigitalCompetency_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/DigitalCompetency_ResourcePage&quot;,&quot;presenter&quot;:&quot;DeAnna Soth, Assistant Director of Instructional Design, EdPlus&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;Start Small: Stories of Moving a Course Online&quot;,&quot;summary&quot;:&quot;Hear how two instructors moved step by step from face-to-face to blended and online teaching, what students value in digitally enabled courses, and which e-SHE tools support this.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Watch 00:14-01:09 (stories, students, tools). Q&amp;A optional.&quot;,&quot;duration&quot;:&quot;76 min&quot;,&quot;video&quot;:&quot;https://bit.ly/CaseStudiesWebinar-ResourceSite&quot;,&quot;slides&quot;:&quot;https://bit.ly/CaseStudySlides-ResourceSite&quot;,&quot;resources&quot;:&quot;https://bit.ly/CaseStudyResources-ResourceSite&quot;,&quot;presenter&quot;:&quot;Elizabeth Gordon, Asst. Director, International Learning Technologies &amp; ID, and Kim Welch, Principal International ID and Trainer, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Working Effectively with an Instructional Designer&quot;,&quot;summary&quot;:&quot;Learn how instructors can partner with instructional designers to plan, build, and improve online learning experiences.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~59 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/WorkingWithID_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/WorkingWithID_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/WorkingWithID_ResourcePage&quot;,&quot;presenter&quot;:&quot;DeAnna Soth, Assistant Director of Instructional Design, EdPlus&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;Coffee Talk: Choosing What to Put Online: Policy, Priorities, and Practice&quot;,&quot;summary&quot;:&quot;Ethiopian university leaders and instructors explain national e-learning policy, how their universities choose which courses to take online or blended, and how they adapt existing materials.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:&quot;~00:45-01:16&quot;,&quot;duration&quot;:&quot;93 min&quot;,&quot;video&quot;:&quot;https://bit.ly/YouTubeDecidingWhatToBuild-ResourceSite&quot;,&quot;slides&quot;:&quot;https://bit.ly/DecidingWhatToBuildSlides-ResourceSite&quot;,&quot;resources&quot;:&quot;https://bit.ly/ResourcePadletDecidingWhatToBuild&quot;,&quot;presenter&quot;:&quot;Panel of Ethiopian University Instructors&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;Coffee Talk: Using the Syllabus in Blended and Online Courses&quot;,&quot;summary&quot;:&quot;Ethiopian instructors discuss how they use the syllabus, what changes in blended and online courses, and how to post a syllabus in e-SHE.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;77 min&quot;,&quot;video&quot;:&quot;https://bit.ly/YouTubeSyllabusCoffeeTalk-ResourceSite&quot;,&quot;slides&quot;:&quot;https://bit.ly/SyllabusSlides-ResourceSite&quot;,&quot;resources&quot;:&quot;http://bit.ly/SyllabusResourcesPadlet&quot;,&quot;presenter&quot;:&quot;Panel of Ethiopian University Instructors&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:3.0,&quot;title&quot;:&quot;Developing and Selecting Online Course Content&quot;,&quot;summary&quot;:&quot;Learn how to choose, adapt, and organize content for effective digitally enabled courses.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~68 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/DevelopingSelectingContent_Recording&quot;,&quot;slides&quot;:&quot;https://drive.google.com/file/d/15q9trQ_uD0GSk9Pg5U4hOd2L2mYuVxps/view&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Renee Pilbeam, Assistant Director (IDNM), Professional Development &amp; Training, EdPlus&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Designing and Recording Academic Media&quot;,&quot;summary&quot;:&quot;Learn best practices for planning, designing, and recording academic media for online courses.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;65 min&quot;,&quot;video&quot;:&quot;https://bit.ly/BestPracticesforDesigningandRecordingAcademicMedia_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/DesigningRecordingAcademicMedia_Presentation&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Not listed&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:4.0,&quot;title&quot;:&quot;Make Your e-SHE Course Content Accessible&quot;,&quot;summary&quot;:&quot;Learn what accessibility means for e-SHE learners, hear from a learner who uses a screen reader, and see how to add headings, alt text, video transcripts, and clear PDF names in Open edX Studio.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Watch ~00:07-00:57; closing advice ~01:05-01:13 optional.&quot;,&quot;duration&quot;:&quot;87 min&quot;,&quot;video&quot;:&quot;https://bit.ly/YoutubeMakingContentAccessible&quot;,&quot;slides&quot;:&quot;https://bit.ly/MakingContentAccessibleSlides-ResourceSite&quot;,&quot;resources&quot;:&quot;https://bit.ly/ResourceMakingContentAccessible&quot;,&quot;presenter&quot;:&quot;ASU &amp; e-SHE Experts&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Optional (after step 4)&quot;,&quot;title&quot;:&quot;Digital Accessibility and Inclusivity in Online Courses&quot;,&quot;summary&quot;:&quot;Learn accessibility and inclusivity practices that help online materials work for more learners.&quot;,&quot;recommendation&quot;:&quot;Include: optional (core in ID variation)&quot;,&quot;viewing&quot;:&quot;US legal references are context only.&quot;,&quot;duration&quot;:&quot;~75 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/DigitalAccessibilityandInclusivity_Recording&quot;,&quot;slides&quot;:null,&quot;resources&quot;:&quot;https://bit.ly/DigitalAccessibilityInclusivity_ResourcePage&quot;,&quot;presenter&quot;:&quot;Panel of Accessibility and Inclusivity Team at ASU&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Optional (after step 4)&quot;,&quot;title&quot;:&quot;Engage Learners in High-Enrollment Online Courses&quot;,&quot;summary&quot;:&quot;Plan course design, communication, assessment, and feedback so that large online courses stay engaging for students and manageable for the instructor.&quot;,&quot;recommendation&quot;:&quot;Include: optional (core in ID variation)&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~69 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/EngagementScaleVirtualClass_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/EngagementScaleVirtualClass_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/EngagementScaleVirtualClass_ResourcePage&quot;,&quot;presenter&quot;:&quot;Renee Pilbeam, Assistant Director (IDNM), Professional Development &amp; Training, EdPlus&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Optional (after step 4)&quot;,&quot;title&quot;:&quot;Coffee Talk: e-SHE Faculty Leading Digital Transformation&quot;,&quot;summary&quot;:&quot;Learn from faculty experiences leading digital transformation through e-SHE course work.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;85 min&quot;,&quot;video&quot;:&quot;https://bit.ly/LearnFrome-SHEFaculty&quot;,&quot;slides&quot;:&quot;https://bit.ly/Learnfrome-SHEFacultyLeadingDigitalTransformationPresenationSlides&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;ASU &amp; e-SHE Experts&quot;},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Writing measurable objectives and building an alignment map&quot;,&quot;summary&quot;:&quot;Proposed resource type: Short introductory video (8-10 min) + job aid (objective verbs and alignment map template).&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Remaining accessibility how-to beyond the basics&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid (checklist) covering the uncovered items.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Designing for low bandwidth and mobile access&quot;,&quot;summary&quot;:&quot;Proposed resource type: Short video + job aid (file sizes, offline options, mobile testing).&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-1&quot;,&quot;name&quot;:&quot;Design a Digitally Enabled Course&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Copyright, licensing, and OER use (international)&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid reviewed by library/legal staff; correct W27 with an on-screen note.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-2&quot;,&quot;name&quot;:&quot;Designing Assessments for Students&#x27; Learning&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate (step 1 is introductory)&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;Coffee Talk: Creating Online Assessments&quot;,&quot;summary&quot;:&quot;Discuss practical approaches to creating online assessments that support learner progress.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Platform segment ~00:35-00:45 can be skipped here and used in FI-3.&quot;,&quot;duration&quot;:&quot;77 min&quot;,&quot;video&quot;:&quot;http://bit.ly/YoutubeCreatingOnlineAssessments&quot;,&quot;slides&quot;:&quot;https://bit.ly/CreatingOnlineAssessmentsSlides-ResourceSite&quot;,&quot;resources&quot;:&quot;http://bit.ly/ResourceCreatingOnlineAssessments&quot;,&quot;presenter&quot;:&quot;ASU Experts&quot;},{&quot;path&quot;:&quot;FI-2&quot;,&quot;name&quot;:&quot;Designing Assessments for Students&#x27; Learning&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate (step 1 is introductory)&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Design Assessments for an AI-Enabled World&quot;,&quot;summary&quot;:&quot;Learn how to design assessments where students use AI in appropriate ways: start from the task and the knowledge it needs, collect evidence of the learning process, and check any AI-supported feedback.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;63 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Tamara-Mitchell-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Tamara-Mitchell-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Tamara-Mitchell-Webinar-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Tamara Mitchell, Learning Experience and AI Technology Lead, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;FI-2&quot;,&quot;name&quot;:&quot;Designing Assessments for Students&#x27; Learning&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate (step 1 is introductory)&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;Grading in Open edX: Setting Up Open Response Assessments (ORAs)&quot;,&quot;summary&quot;:&quot;Learn how to create and configure Open Response Assessments in Open edX.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~65 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/ORAConfiguration-OpenedX&quot;,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Kim Welch and Christy Foote-Dizdarevic&quot;},{&quot;path&quot;:&quot;FI-2&quot;,&quot;name&quot;:&quot;Designing Assessments for Students&#x27; Learning&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate (step 1 is introductory)&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;Use AI Skills to Support Instructional Design Tasks&quot;,&quot;summary&quot;:&quot;See how an instructional designer turns design steps, such as writing objectives and building a syllabus, into reusable AI instructions (\&quot;skills\&quot;), and how to check AI outputs for quality.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;58 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Stuart-Rice-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Stuart-Rice-Webinar-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Stuart-Rice-Resources-eSHe&quot;,&quot;presenter&quot;:&quot;Stuart Rice, Executive Director, Learning Experience, ET Enterprise Technology Experience, ASU&quot;},{&quot;path&quot;:&quot;FI-2&quot;,&quot;name&quot;:&quot;Designing Assessments for Students&#x27; Learning&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate (step 1 is introductory)&quot;,&quot;order&quot;:3.0,&quot;title&quot;:&quot;Engage Learners in High-Enrollment Online Courses&quot;,&quot;summary&quot;:&quot;Plan course design, communication, assessment, and feedback so that large online courses stay engaging for students and manageable for the instructor.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~69 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/EngagementScaleVirtualClass_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/EngagementScaleVirtualClass_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/EngagementScaleVirtualClass_ResourcePage&quot;,&quot;presenter&quot;:&quot;Renee Pilbeam, Assistant Director (IDNM), Professional Development &amp; Training, EdPlus&quot;},{&quot;path&quot;:&quot;FI-2&quot;,&quot;name&quot;:&quot;Designing Assessments for Students&#x27; Learning&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate (step 1 is introductory)&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Math in Open edX: Building Math and Science Assessments&quot;,&quot;summary&quot;:&quot;Learn how to build math and science assessments in Open edX.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~58 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/Colin-Fredericks-Math-Science-Assessments-OpenedX&quot;,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Colin Fredericks, Harvard&quot;},{&quot;path&quot;:&quot;FI-2&quot;,&quot;name&quot;:&quot;Designing Assessments for Students&#x27; Learning&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate (step 1 is introductory)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Writing measurable objectives and building an alignment map&quot;,&quot;summary&quot;:&quot;Proposed resource type: Short introductory video (8-10 min) + job aid (objective verbs and alignment map template).&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-2&quot;,&quot;name&quot;:&quot;Designing Assessments for Students&#x27; Learning&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate (step 1 is introductory)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Online exam settings and integrity options in Open edX&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid (what the platform can and cannot do) + KB article links.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-2&quot;,&quot;name&quot;:&quot;Designing Assessments for Students&#x27; Learning&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate (step 1 is introductory)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Course-level data use for faculty&quot;,&quot;summary&quot;:&quot;Proposed resource type: Short video + job aid.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;Prepare and Launch e-SHE Courses and Master Class Sessions&quot;,&quot;summary&quot;:&quot;Learn the e-SHE course development steps (dev shell, build, beta test, blueprint) and how to run Master Class sessions and ELIS training at your university.&quot;,&quot;recommendation&quot;:&quot;Include: core (segment)&quot;,&quot;viewing&quot;:&quot;Watch ~00:03-00:21 only. The rest is for e-learning admins (UL-4).&quot;,&quot;duration&quot;:&quot;51 min&quot;,&quot;video&quot;:&quot;https://bit.ly/TechSeries_PreparingeSHECourses&quot;,&quot;slides&quot;:&quot;https://bit.ly/TechSeries_Slides_StructureToSpotlight&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Erlina Mangan, Kim Welch and Elizabeth Gordon&quot;},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Coffee Talk: Creating and Loading Content Online&quot;,&quot;summary&quot;:&quot;Review practical tips for creating and loading online course content.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;73 min&quot;,&quot;video&quot;:&quot;https://bit.ly/YouTubeCreatingLoadingContent-ResourceSite&quot;,&quot;slides&quot;:&quot;https://bit.ly/CreatingAndLoadingContentSlides-ResourceSite&quot;,&quot;resources&quot;:&quot;https://bit.ly/ResourceCreatingLoadingContentOnline&quot;,&quot;presenter&quot;:&quot;ASU Experts&quot;},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:&quot;Optional (with step 2)&quot;,&quot;title&quot;:&quot;Make Your e-SHE Course Content Accessible&quot;,&quot;summary&quot;:&quot;Learn what accessibility means for e-SHE learners, hear from a learner who uses a screen reader, and see how to add headings, alt text, video transcripts, and clear PDF names in Open edX Studio.&quot;,&quot;recommendation&quot;:&quot;Include: optional (segment)&quot;,&quot;viewing&quot;:&quot;~00:44-00:57. Skip if FI-1 completed.&quot;,&quot;duration&quot;:&quot;87 min&quot;,&quot;video&quot;:&quot;https://bit.ly/YoutubeMakingContentAccessible&quot;,&quot;slides&quot;:&quot;https://bit.ly/MakingContentAccessibleSlides-ResourceSite&quot;,&quot;resources&quot;:&quot;https://bit.ly/ResourceMakingContentAccessible&quot;,&quot;presenter&quot;:&quot;ASU &amp; e-SHE Experts&quot;},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:3.0,&quot;title&quot;:&quot;Set Up Your Grading Policy in Open edX&quot;,&quot;summary&quot;:&quot;Plan your grade weights, set up the grading policy in Open edX Studio, and create a basic open response assessment (ORA) with a rubric.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Most of the session is an ORA demo that W29 covers in depth; watch the grading part, skim the rest.&quot;,&quot;duration&quot;:&quot;~68 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/SetUpGrading_OpenedX&quot;,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Kim Welch and Christy Foote-Dizdarevic&quot;},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Coffee Talk: Creating Online Assessments&quot;,&quot;summary&quot;:&quot;Discuss practical approaches to creating online assessments that support learner progress.&quot;,&quot;recommendation&quot;:&quot;Include: optional (segment)&quot;,&quot;viewing&quot;:&quot;~00:35-00:45&quot;,&quot;duration&quot;:&quot;77 min&quot;,&quot;video&quot;:&quot;http://bit.ly/YoutubeCreatingOnlineAssessments&quot;,&quot;slides&quot;:&quot;https://bit.ly/CreatingOnlineAssessmentsSlides-ResourceSite&quot;,&quot;resources&quot;:&quot;http://bit.ly/ResourceCreatingOnlineAssessments&quot;,&quot;presenter&quot;:&quot;ASU Experts&quot;},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:4.0,&quot;title&quot;:&quot;Grading in Open edX: Setting Up Open Response Assessments (ORAs)&quot;,&quot;summary&quot;:&quot;Learn how to create and configure Open Response Assessments in Open edX.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~65 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/ORAConfiguration-OpenedX&quot;,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Kim Welch and Christy Foote-Dizdarevic&quot;},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:&quot;Optional (after step 4)&quot;,&quot;title&quot;:&quot;Math in Open edX: Building Math and Science Assessments&quot;,&quot;summary&quot;:&quot;Learn how to build math and science assessments in Open edX.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~58 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/Colin-Fredericks-Math-Science-Assessments-OpenedX&quot;,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Colin Fredericks, Harvard&quot;},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:5.0,&quot;title&quot;:&quot;Grading in Open edX: Setting Up Grading for Blended Courses&quot;,&quot;summary&quot;:&quot;Learn how to weight blended or hybrid courses in Open edX.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~66 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/Weighting-Blended-Courses-OpenedX&quot;,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Kim Welch&quot;},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Remaining accessibility how-to beyond the basics&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid (checklist) covering the uncovered items.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Course quality review (QM-style self-review) before launch&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid (self-review checklist) + short worked example.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Online exam settings and integrity options in Open edX&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid (what the platform can and cannot do) + KB article links.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-3&quot;,&quot;name&quot;:&quot;Build, Grade, and Launch a Course in e-SHE Open edX&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate (platform-specific procedures)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Learner onboarding to e-SHE&quot;,&quot;summary&quot;:&quot;Proposed resource type: Template (orientation module) + short student-facing video.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-4&quot;,&quot;name&quot;:&quot;Make Instructional Videos&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;Introduction to ASU&#x27;s Approach to Academic Media&quot;,&quot;summary&quot;:&quot;Not yet verified (no transcript).&quot;,&quot;recommendation&quot;:&quot;Defer: transcript missing&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;Unknown (no transcript)&quot;,&quot;video&quot;:&quot;https://bit.ly/ASUApproachtoAcademicMedia_Video&quot;,&quot;slides&quot;:&quot;https://bit.ly/ASUApproachtoAcademicMedia&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Not listed&quot;},{&quot;path&quot;:&quot;FI-4&quot;,&quot;name&quot;:&quot;Make Instructional Videos&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Designing and Recording Academic Media&quot;,&quot;summary&quot;:&quot;Learn best practices for planning, designing, and recording academic media for online courses.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Add a caveat on the \&quot;10% fair use\&quot; statement in Q&amp;A.&quot;,&quot;duration&quot;:&quot;65 min&quot;,&quot;video&quot;:&quot;https://bit.ly/BestPracticesforDesigningandRecordingAcademicMedia_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/DesigningRecordingAcademicMedia_Presentation&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Not listed&quot;},{&quot;path&quot;:&quot;FI-4&quot;,&quot;name&quot;:&quot;Make Instructional Videos&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;Running a University-Based Multimedia Studio&quot;,&quot;summary&quot;:&quot;Review operational practices for building and running a university multimedia studio.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;78 min&quot;,&quot;video&quot;:&quot;https://bit.ly/BestPracticesforRunningaUniversityBasedMultimediaStudio_Video&quot;,&quot;slides&quot;:&quot;https://bit.ly/BestPracticesforRunningaUniversity-BasedMultimediaStudio_Presentation&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Not listed&quot;},{&quot;path&quot;:&quot;FI-4&quot;,&quot;name&quot;:&quot;Make Instructional Videos&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;Behind the Scenes: Building the AI Essentials Course with AI&quot;,&quot;summary&quot;:&quot;Behind the scenes of the AI Essentials course: how the team used AI tools to create images, video, and audio with human review, and why AI bias and AI-detection tools matter for African learners.&quot;,&quot;recommendation&quot;:&quot;Include: optional (segment)&quot;,&quot;viewing&quot;:&quot;~00:28-00:48&quot;,&quot;duration&quot;:&quot;67 min&quot;,&quot;video&quot;:&quot;https://bit.ly/AiEssentials&quot;,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;ASU Team&quot;},{&quot;path&quot;:&quot;FI-4&quot;,&quot;name&quot;:&quot;Plan and Record Effective Academic Media (PROVISIONAL)&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Copyright, licensing, and OER use (international)&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid reviewed by library/legal staff; correct W27 with an on-screen note.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;FI-5&quot;,&quot;name&quot;:&quot;Use AI Responsibly in Your Teaching&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;Imagining Learning with AI: Uses, Examples, and Safeguards&quot;,&quot;summary&quot;:&quot;See how AI can work as a creator, a coach, and a calculator in learning, with course examples. Learn what a university needs in place (security, privacy, safety, and clear use decisions) before AI use grows.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;For faculty, the policy discussion near the end is useful context.&quot;,&quot;duration&quot;:&quot;58 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Kyle_Bowen_Webinar_Youtube_e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Kyle_Bowen_Webinar_Slides_e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Kyle-Bowen-Resource-Page-e-SHE&quot;,&quot;presenter&quot;:&quot;Kyle Bowen, Deputy Chief Information Officer, Enterprise Technology, ASU&quot;},{&quot;path&quot;:&quot;FI-5&quot;,&quot;name&quot;:&quot;Use AI Responsibly in Your Teaching&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate&quot;,&quot;order&quot;:&quot;Optional (after step 1)&quot;,&quot;title&quot;:&quot;From Chatbots to AI Agents: What Agentic AI Can Do in Education&quot;,&quot;summary&quot;:&quot;Learn how agentic AI differs from chat-based generative AI, see ASU examples of multi-step AI agents, and learn why agents should only be allowed to take safe actions.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;64 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Roger-Kohler-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Roger-Kohler-Webinar-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Roger-Kohler-Resource-Page-eSHE&quot;,&quot;presenter&quot;:&quot;Roger Kohler, Director, AI Solutions and Architecture, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;FI-5&quot;,&quot;name&quot;:&quot;Use AI Responsibly in Your Teaching&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Use AI Securely: Prompt Attacks, Data Risks, and Safe Practices&quot;,&quot;summary&quot;:&quot;Understand digital trust and data security considerations for responsible AI-enabled education.&quot;,&quot;recommendation&quot;:&quot;Include: core (segment)&quot;,&quot;viewing&quot;:&quot;Watch ~00:05-00:33. Technical controls and Q&amp;A are optional.&quot;,&quot;duration&quot;:&quot;61 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Omar-Alkhatib-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Omar-Alkhatib-Webinar-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Omar-Alkhatib-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Omar Alkhatib, AI Security Engineer, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;FI-5&quot;,&quot;name&quot;:&quot;Use AI Responsibly in Your Teaching&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate&quot;,&quot;order&quot;:3.0,&quot;title&quot;:&quot;Design Assessments for an AI-Enabled World&quot;,&quot;summary&quot;:&quot;Learn how to design assessments where students use AI in appropriate ways: start from the task and the knowledge it needs, collect evidence of the learning process, and check any AI-supported feedback.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;63 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Tamara-Mitchell-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Tamara-Mitchell-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Tamara-Mitchell-Webinar-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Tamara Mitchell, Learning Experience and AI Technology Lead, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;FI-5&quot;,&quot;name&quot;:&quot;Use AI Responsibly in Your Teaching&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Behind the Scenes: Building the AI Essentials Course with AI&quot;,&quot;summary&quot;:&quot;Behind the scenes of the AI Essentials course: how the team used AI tools to create images, video, and audio with human review, and why AI bias and AI-detection tools matter for African learners.&quot;,&quot;recommendation&quot;:&quot;Include: optional (segment)&quot;,&quot;viewing&quot;:&quot;~00:43-00:50&quot;,&quot;duration&quot;:&quot;67 min&quot;,&quot;video&quot;:&quot;https://bit.ly/AiEssentials&quot;,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;ASU Team&quot;},{&quot;path&quot;:&quot;FI-5&quot;,&quot;name&quot;:&quot;Use AI Responsibly in Your Teaching&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;AI for Student Success: Advising, Insights, and Career Pathways&quot;,&quot;summary&quot;:&quot;Explore AI-supported student success use cases, including predictive insights, advising, and career pathways.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;61 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Kofi-Wood-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Kofi-Wood-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Kofi-Wood-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Kofi Wood, Technical Product Manager, ASU&quot;},{&quot;path&quot;:&quot;FI-5&quot;,&quot;name&quot;:&quot;Use AI Responsibly in Your Teaching&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Introductory to intermediate&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Build AI Capacity: An Empathy-First Approach to Upskilling Faculty and Leaders&quot;,&quot;summary&quot;:&quot;Learn an empathy-first way to build AI skills in faculty and leaders: understand why people resist, give protected time, share examples from colleagues, and run hands-on workshops where people build something useful.&quot;,&quot;recommendation&quot;:&quot;Include: optional (segment)&quot;,&quot;viewing&quot;:&quot;~00:29-00:50&quot;,&quot;duration&quot;:&quot;50 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Paul-Alvarado-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Paul-Alvarado-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Resource-Paul-Alvarado-eSHE&quot;,&quot;presenter&quot;:&quot;Paul Alvarado, Associate Director of AI Programs and Analytics, ET Artificial Intelligence Teaching and Learning, ASU&quot;},{&quot;path&quot;:&quot;FI-6&quot;,&quot;name&quot;:&quot;Use AI for Instructional Design&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate to advanced&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;From Chatbots to AI Agents: What Agentic AI Can Do in Education&quot;,&quot;summary&quot;:&quot;Learn how agentic AI differs from chat-based generative AI, see ASU examples of multi-step AI agents, and learn why agents should only be allowed to take safe actions.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Tool names will date; focus on concepts.&quot;,&quot;duration&quot;:&quot;64 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Roger-Kohler-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Roger-Kohler-Webinar-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Roger-Kohler-Resource-Page-eSHE&quot;,&quot;presenter&quot;:&quot;Roger Kohler, Director, AI Solutions and Architecture, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;FI-6&quot;,&quot;name&quot;:&quot;Integrate AI into Instructional Design Workflows&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate to advanced&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Use AI Skills to Support Instructional Design Tasks&quot;,&quot;summary&quot;:&quot;See how an instructional designer turns design steps, such as writing objectives and building a syllabus, into reusable AI instructions (\&quot;skills\&quot;), and how to check AI outputs for quality.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;58 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Stuart-Rice-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Stuart-Rice-Webinar-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Stuart-Rice-Resources-eSHe&quot;,&quot;presenter&quot;:&quot;Stuart Rice, Executive Director, Learning Experience, ET Enterprise Technology Experience, ASU&quot;},{&quot;path&quot;:&quot;FI-6&quot;,&quot;name&quot;:&quot;Integrate AI into Instructional Design Workflows&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate to advanced&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;Design Assessments for an AI-Enabled World&quot;,&quot;summary&quot;:&quot;Learn how to design assessments where students use AI in appropriate ways: start from the task and the knowledge it needs, collect evidence of the learning process, and check any AI-supported feedback.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;63 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Tamara-Mitchell-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Tamara-Mitchell-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Tamara-Mitchell-Webinar-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Tamara Mitchell, Learning Experience and AI Technology Lead, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;FI-6&quot;,&quot;name&quot;:&quot;Integrate AI into Instructional Design Workflows&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate to advanced&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;Behind the Scenes: Building the AI Essentials Course with AI&quot;,&quot;summary&quot;:&quot;Behind the scenes of the AI Essentials course: how the team used AI tools to create images, video, and audio with human review, and why AI bias and AI-detection tools matter for African learners.&quot;,&quot;recommendation&quot;:&quot;Include: optional (segment)&quot;,&quot;viewing&quot;:&quot;~00:28-00:48&quot;,&quot;duration&quot;:&quot;67 min&quot;,&quot;video&quot;:&quot;https://bit.ly/AiEssentials&quot;,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;ASU Team&quot;},{&quot;path&quot;:&quot;FI-6&quot;,&quot;name&quot;:&quot;Integrate AI into Instructional Design Workflows&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate to advanced&quot;,&quot;order&quot;:3.0,&quot;title&quot;:&quot;Use AI Securely: Prompt Attacks, Data Risks, and Safe Practices&quot;,&quot;summary&quot;:&quot;Understand digital trust and data security considerations for responsible AI-enabled education.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;61 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Omar-Alkhatib-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Omar-Alkhatib-Webinar-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Omar-Alkhatib-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Omar Alkhatib, AI Security Engineer, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;FI-6&quot;,&quot;name&quot;:&quot;Integrate AI into Instructional Design Workflows&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate to advanced&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Evaluating AI in Education: Safety, Effectiveness, and Impact&quot;,&quot;summary&quot;:&quot;Review how education teams can evaluate AI tools for safety, learning effectiveness, and institutional impact.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;53 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Stella-Liu-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Stella-Liu-Webinar-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Stella-Liu-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Stella Liu, Head of AI Applied Science, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;FI-6&quot;,&quot;name&quot;:&quot;Integrate AI into Instructional Design Workflows&quot;,&quot;persona&quot;:&quot;Faculty and Instructional Designers&quot;,&quot;level&quot;:&quot;Intermediate to advanced&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Build AI Capacity: An Empathy-First Approach to Upskilling Faculty and Leaders&quot;,&quot;summary&quot;:&quot;Learn an empathy-first way to build AI skills in faculty and leaders: understand why people resist, give protected time, share examples from colleagues, and run hands-on workshops where people build something useful.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:&quot;~00:02-00:29&quot;,&quot;duration&quot;:&quot;50 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Paul-Alvarado-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Paul-Alvarado-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Resource-Paul-Alvarado-eSHE&quot;,&quot;presenter&quot;:&quot;Paul Alvarado, Associate Director of AI Programs and Analytics, ET Artificial Intelligence Teaching and Learning, ASU&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;Building a Successful Online Program&quot;,&quot;summary&quot;:&quot;Learn the foundations of building a successful online program at institutional scale.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~19 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/BuildingSuccessfulOnlineProgram_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/BuildingSuccessfulOnlineProgram_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/BuildingSuccessfulOnlineProgram_ResourcePage&quot;,&quot;presenter&quot;:&quot;Dr. Philip Regier, University Dean for Educational Initiatives and CEO, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Business Models for Sustainable Online Programs&quot;,&quot;summary&quot;:&quot;Explore business models that support sustainable online program growth.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Discuss transferability to ministry-funded systems.&quot;,&quot;duration&quot;:&quot;~22 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/BusinessModelsSustainableOnlinePrograms_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/BusinessModelsSustainableOnlinePrograms_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/BusinessModelsSustainableOnlinePrograms_ResourcePage&quot;,&quot;presenter&quot;:&quot;Dr. Philip Regier, University Dean for Educational Initiatives and CEO, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:3.0,&quot;title&quot;:&quot;Building Teams and Staffing for Online Programs&quot;,&quot;summary&quot;:&quot;Learn how to think about teams, roles, and personnel needed for online program delivery.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Short; confirm the recording is complete.&quot;,&quot;duration&quot;:&quot;~10 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/BuildingTeamsPersonnel_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/BuildingTeamsPersonnel_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/BuildingTeamsPersonnel_ResourcePage&quot;,&quot;presenter&quot;:&quot;Casey Evans, Chief Growth Officer, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Working Effectively with an Instructional Designer&quot;,&quot;summary&quot;:&quot;Learn how instructors can partner with instructional designers to plan, build, and improve online learning experiences.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~59 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/WorkingWithID_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/WorkingWithID_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/WorkingWithID_ResourcePage&quot;,&quot;presenter&quot;:&quot;DeAnna Soth, Assistant Director of Instructional Design, EdPlus&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:4.0,&quot;title&quot;:&quot;Selecting Technology for Teaching and Learning&quot;,&quot;summary&quot;:&quot;Review considerations for selecting learning technologies that fit instructional and institutional needs.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~69 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/SelectingTechTeachLearn_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/SelectingTechTeachLearn_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/SelectingTechTeachLearn_ResourcePage&quot;,&quot;presenter&quot;:&quot;Philippos Savvides, Associate Director, Learning Technologies, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:&quot;Optional (after step 4)&quot;,&quot;title&quot;:&quot;Marketing, Website Development, and UX/UI Design&quot;,&quot;summary&quot;:&quot;Learn how marketing, web presence, and UX/UI design support online program discovery and learner experience.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~64 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/MarketingUXDesign_Recording&quot;,&quot;slides&quot;:&quot;https://drive.google.com/file/d/1jHdGcZShN83w5Vuli1EVX93j9ezZ9RJ4/view?usp=sharing&quot;,&quot;resources&quot;:&quot;https://bit.ly/MarketingUXDesign_ResourcePage&quot;,&quot;presenter&quot;:&quot;Amanda Gulley, Chief of User Experience Design, EdPlus&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:&quot;Optional (after step 4)&quot;,&quot;title&quot;:&quot;Digital Accessibility and Inclusivity in Online Courses&quot;,&quot;summary&quot;:&quot;Learn accessibility and inclusivity practices that help online materials work for more learners.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~75 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/DigitalAccessibilityandInclusivity_Recording&quot;,&quot;slides&quot;:null,&quot;resources&quot;:&quot;https://bit.ly/DigitalAccessibilityInclusivity_ResourcePage&quot;,&quot;presenter&quot;:&quot;Panel of Accessibility and Inclusivity Team at ASU&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:5.0,&quot;title&quot;:&quot;Use Data to Understand and Improve Student Success&quot;,&quot;summary&quot;:&quot;Learn how to define student success for your own students, choose useful measures, and start simple data and predictive-analytics projects with the data you already have.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~52 min (est.; breakouts not transcribed)&quot;,&quot;video&quot;:&quot;https://bit.ly/DataPredictiveAnalytics_eSHEResource&quot;,&quot;slides&quot;:&quot;https://drive.google.com/file/d/1-PjXW3cysnSREqItjGkjJlXsE3eJL6T1/view&quot;,&quot;resources&quot;:&quot;https://bit.ly/DataPredictiveAnalytics_ResourcePage&quot;,&quot;presenter&quot;:&quot;Tom Fikes, Data &amp; Learning Scientist, EdPlus Action Lab and Jim Cunningham, Senior Research Analyst, EdPlus&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:&quot;Optional (after step 5)&quot;,&quot;title&quot;:&quot;AI for Student Success: Advising, Insights, and Career Pathways&quot;,&quot;summary&quot;:&quot;Explore AI-supported student success use cases, including predictive insights, advising, and career pathways.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;61 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Kofi-Wood-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Kofi-Wood-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Kofi-Wood-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Kofi Wood, Technical Product Manager, ASU&quot;},{&quot;path&quot;:&quot;UL-1&quot;,&quot;name&quot;:&quot;Plan, Staff, and Sustain an Online Program&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate (W32 and W34 introductory)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Funding and cost models for public, ministry-funded institutions&quot;,&quot;summary&quot;:&quot;Proposed resource type: Case study from an African public university or ministry-led program.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;UL-2&quot;,&quot;name&quot;:&quot;Lead AI Adoption from Vision to Everyday Practice&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;From EdTech to TechEd: The Next Chapter of Learning&quot;,&quot;summary&quot;:&quot;Explore how learning technology is evolving and what the shift from EdTech to TechEd means for institutional strategy.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;59 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Lev-Gonick-Webinar-YouTube&quot;,&quot;slides&quot;:&quot;https://bit.ly/Lev-Gonick-webinar-slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/Lev-Gonick-Resource-Page&quot;,&quot;presenter&quot;:&quot;Lev Gonick, Chief Information Officer, ASU&quot;},{&quot;path&quot;:&quot;UL-2&quot;,&quot;name&quot;:&quot;Lead AI Adoption from Vision to Everyday Practice&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Imagining Learning with AI: Uses, Examples, and Safeguards&quot;,&quot;summary&quot;:&quot;See how AI can work as a creator, a coach, and a calculator in learning, with course examples. Learn what a university needs in place (security, privacy, safety, and clear use decisions) before AI use grows.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;For leaders, focus on the strategy and policy parts.&quot;,&quot;duration&quot;:&quot;58 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Kyle_Bowen_Webinar_Youtube_e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Kyle_Bowen_Webinar_Slides_e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Kyle-Bowen-Resource-Page-e-SHE&quot;,&quot;presenter&quot;:&quot;Kyle Bowen, Deputy Chief Information Officer, Enterprise Technology, ASU&quot;},{&quot;path&quot;:&quot;UL-2&quot;,&quot;name&quot;:&quot;Lead AI Adoption from Vision to Everyday Practice&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;AI for Student Success: Advising, Insights, and Career Pathways&quot;,&quot;summary&quot;:&quot;Explore AI-supported student success use cases, including predictive insights, advising, and career pathways.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;61 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Kofi-Wood-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Kofi-Wood-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Kofi-Wood-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Kofi Wood, Technical Product Manager, ASU&quot;},{&quot;path&quot;:&quot;UL-2&quot;,&quot;name&quot;:&quot;Lead AI Adoption from Vision to Everyday Practice&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:3.0,&quot;title&quot;:&quot;Build AI Capacity: An Empathy-First Approach to Upskilling Faculty and Leaders&quot;,&quot;summary&quot;:&quot;Learn an empathy-first way to build AI skills in faculty and leaders: understand why people resist, give protected time, share examples from colleagues, and run hands-on workshops where people build something useful.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Main talk ~00:02-00:29; Q&amp;A on low-resource starts ~00:29-00:50 recommended for partner institutions.&quot;,&quot;duration&quot;:&quot;50 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Paul-Alvarado-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Paul-Alvarado-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Resource-Paul-Alvarado-eSHE&quot;,&quot;presenter&quot;:&quot;Paul Alvarado, Associate Director of AI Programs and Analytics, ET Artificial Intelligence Teaching and Learning, ASU&quot;},{&quot;path&quot;:&quot;UL-2&quot;,&quot;name&quot;:&quot;Lead AI Adoption from Vision to Everyday Practice&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:&quot;Optional (before step 4)&quot;,&quot;title&quot;:&quot;Evaluating AI in Education: Safety, Effectiveness, and Impact&quot;,&quot;summary&quot;:&quot;Review how education teams can evaluate AI tools for safety, learning effectiveness, and institutional impact.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;53 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Stella-Liu-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Stella-Liu-Webinar-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Stella-Liu-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Stella Liu, Head of AI Applied Science, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;UL-2&quot;,&quot;name&quot;:&quot;Lead AI Adoption from Vision to Everyday Practice&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:4.0,&quot;title&quot;:&quot;Crafting an AI Narrative for Institutional Change&quot;,&quot;summary&quot;:&quot;Learn how institutions can communicate an AI vision clearly enough to build trust, momentum, and alignment.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;58 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Tina-Miller-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Tina-Miller-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Resource-Tina-Miller-eSHE&quot;,&quot;presenter&quot;:&quot;Tina Miller, Executive Director, Creative and Communications, ASU&quot;},{&quot;path&quot;:&quot;UL-2&quot;,&quot;name&quot;:&quot;Lead AI Adoption from Vision to Everyday Practice&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:5.0,&quot;title&quot;:&quot;Making AI Stick: From Pilot to Infrastructure&quot;,&quot;summary&quot;:&quot;Explore what it takes to move AI from pilots into sustainable institutional infrastructure.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;57 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Ayat-Sweid-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Ayat-Sweid-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Resources-Ayat-Sweid-eSHE&quot;,&quot;presenter&quot;:&quot;Ayat Sweid, Head of AI Product, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;UL-2&quot;,&quot;name&quot;:&quot;Lead AI Adoption from Vision to Everyday Practice&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Institutional e-learning and AI policy templates&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid (policy template with annotated examples).&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;UL-2&quot;,&quot;name&quot;:&quot;Lead AI Adoption from Vision to Everyday Practice&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;AI upskilling in a low-resource partner institution&quot;,&quot;summary&quot;:&quot;Proposed resource type: Case study from an e-SHE or African partner institution.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;UL-3&quot;,&quot;name&quot;:&quot;Evaluate and Secure AI Before You Scale It&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:&quot;Optional (before step 1)&quot;,&quot;title&quot;:&quot;Generative and Agentic AI for Teaching and Learning&quot;,&quot;summary&quot;:&quot;Learn how agentic AI differs from chat-based generative AI, see ASU examples of multi-step AI agents, and learn why agents should only be allowed to take safe actions.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;64 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Roger-Kohler-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Roger-Kohler-Webinar-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Roger-Kohler-Resource-Page-eSHE&quot;,&quot;presenter&quot;:&quot;Roger Kohler, Director, AI Solutions and Architecture, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;UL-3&quot;,&quot;name&quot;:&quot;Evaluate and Secure AI Before You Scale It&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;Evaluating AI in Education: Safety, Effectiveness, and Impact&quot;,&quot;summary&quot;:&quot;Review how education teams can evaluate AI tools for safety, learning effectiveness, and institutional impact.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Present the failure statistic as a reported claim.&quot;,&quot;duration&quot;:&quot;53 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Stella-Liu-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Stella-Liu-Webinar-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Stella-Liu-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Stella Liu, Head of AI Applied Science, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;UL-3&quot;,&quot;name&quot;:&quot;Evaluate and Secure AI Before You Scale It&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Use AI Securely: Prompt Attacks, Data Risks, and Safe Practices&quot;,&quot;summary&quot;:&quot;Understand digital trust and data security considerations for responsible AI-enabled education.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Verify regulatory references before citing.&quot;,&quot;duration&quot;:&quot;61 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Omar-Alkhatib-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Omar-Alkhatib-Webinar-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Omar-Alkhatib-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Omar Alkhatib, AI Security Engineer, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;UL-3&quot;,&quot;name&quot;:&quot;Evaluate and Secure AI Before You Scale It&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:3.0,&quot;title&quot;:&quot;AI for Student Success: Advising, Insights, and Career Pathways&quot;,&quot;summary&quot;:&quot;Explore AI-supported student success use cases, including predictive insights, advising, and career pathways.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Treat the free-tool demo as an example of what needs governance.&quot;,&quot;duration&quot;:&quot;61 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Kofi-Wood-YouTube-e-SHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Kofi-Wood-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Kofi-Wood-Resources-e-SHE&quot;,&quot;presenter&quot;:&quot;Kofi Wood, Technical Product Manager, ASU&quot;},{&quot;path&quot;:&quot;UL-3&quot;,&quot;name&quot;:&quot;Evaluate and Secure AI Before You Scale It&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Making AI Stick: From Pilot to Infrastructure&quot;,&quot;summary&quot;:&quot;Explore what it takes to move AI from pilots into sustainable institutional infrastructure.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;57 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Ayat-Sweid-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Ayat-Sweid-Slides-e-SHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Resources-Ayat-Sweid-eSHE&quot;,&quot;presenter&quot;:&quot;Ayat Sweid, Head of AI Product, AI Acceleration, ASU&quot;},{&quot;path&quot;:&quot;UL-3&quot;,&quot;name&quot;:&quot;Evaluate and Secure AI Before You Scale It&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Intermediate&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Selecting Technology for Teaching and Learning&quot;,&quot;summary&quot;:&quot;Review considerations for selecting learning technologies that fit instructional and institutional needs.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~69 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/SelectingTechTeachLearn_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/SelectingTechTeachLearn_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/SelectingTechTeachLearn_ResourcePage&quot;,&quot;presenter&quot;:&quot;Philippos Savvides, Associate Director, Learning Technologies, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:1.0,&quot;title&quot;:&quot;Coffee Talk: Choosing What to Put Online: Policy, Priorities, and Practice&quot;,&quot;summary&quot;:&quot;Ethiopian university leaders and instructors explain national e-learning policy, how their universities choose which courses to take online or blended, and how they adapt existing materials.&quot;,&quot;recommendation&quot;:&quot;Include: core (segment)&quot;,&quot;viewing&quot;:&quot;~00:05-00:45 and ~01:01-01:16 (approximate)&quot;,&quot;duration&quot;:&quot;93 min&quot;,&quot;video&quot;:&quot;https://bit.ly/YouTubeDecidingWhatToBuild-ResourceSite&quot;,&quot;slides&quot;:&quot;https://bit.ly/DecidingWhatToBuildSlides-ResourceSite&quot;,&quot;resources&quot;:&quot;https://bit.ly/ResourcePadletDecidingWhatToBuild&quot;,&quot;presenter&quot;:&quot;Panel of Ethiopian University Instructors&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:2.0,&quot;title&quot;:&quot;Working Effectively with an Instructional Designer&quot;,&quot;summary&quot;:&quot;Learn how instructors can partner with instructional designers to plan, build, and improve online learning experiences.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Frame for service design, not personal practice.&quot;,&quot;duration&quot;:&quot;~59 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/WorkingWithID_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/WorkingWithID_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/WorkingWithID_ResourcePage&quot;,&quot;presenter&quot;:&quot;DeAnna Soth, Assistant Director of Instructional Design, EdPlus&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:&quot;Optional (after step 2)&quot;,&quot;title&quot;:&quot;Check and Build Your Digital Skills for Online Teaching&quot;,&quot;summary&quot;:&quot;Check your own digital skills for online teaching with a global framework (IC3). Learn simple ways to build skills and solve common technical problems.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~47 min (est.; breakouts not transcribed)&quot;,&quot;video&quot;:&quot;https://bit.ly/DigitalCompetency_Recording&quot;,&quot;slides&quot;:&quot;https://bit.ly/DigitalCompetency_Slides&quot;,&quot;resources&quot;:&quot;https://bit.ly/DigitalCompetency_ResourcePage&quot;,&quot;presenter&quot;:&quot;DeAnna Soth, Assistant Director of Instructional Design, EdPlus&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:3.0,&quot;title&quot;:&quot;Make Your e-SHE Course Content Accessible&quot;,&quot;summary&quot;:&quot;Learn what accessibility means for e-SHE learners, hear from a learner who uses a screen reader, and see how to add headings, alt text, video transcripts, and clear PDF names in Open edX Studio.&quot;,&quot;recommendation&quot;:&quot;Include: core (segment)&quot;,&quot;viewing&quot;:&quot;~00:07-00:44 (definitions, policy, lived experience, institutional challenges).&quot;,&quot;duration&quot;:&quot;87 min&quot;,&quot;video&quot;:&quot;https://bit.ly/YoutubeMakingContentAccessible&quot;,&quot;slides&quot;:&quot;https://bit.ly/MakingContentAccessibleSlides-ResourceSite&quot;,&quot;resources&quot;:&quot;https://bit.ly/ResourceMakingContentAccessible&quot;,&quot;presenter&quot;:&quot;ASU &amp; e-SHE Experts&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:&quot;Optional (after step 3)&quot;,&quot;title&quot;:&quot;Running a University-Based Multimedia Studio&quot;,&quot;summary&quot;:&quot;Review operational practices for building and running a university multimedia studio.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;78 min&quot;,&quot;video&quot;:&quot;https://bit.ly/BestPracticesforRunningaUniversityBasedMultimediaStudio_Video&quot;,&quot;slides&quot;:&quot;https://bit.ly/BestPracticesforRunningaUniversity-BasedMultimediaStudio_Presentation&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Not listed&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:4.0,&quot;title&quot;:&quot;Prepare and Launch e-SHE Courses and Master Class Sessions&quot;,&quot;summary&quot;:&quot;Learn the e-SHE course development steps (dev shell, build, beta test, blueprint) and how to run Master Class sessions and ELIS training at your university.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:&quot;Watch in full.&quot;,&quot;duration&quot;:&quot;51 min&quot;,&quot;video&quot;:&quot;https://bit.ly/TechSeries_PreparingeSHECourses&quot;,&quot;slides&quot;:&quot;https://bit.ly/TechSeries_Slides_StructureToSpotlight&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;Erlina Mangan, Kim Welch and Elizabeth Gordon&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:&quot;Optional (after step 4)&quot;,&quot;title&quot;:&quot;Start Small: Stories of Moving a Course Online&quot;,&quot;summary&quot;:&quot;Hear how two instructors moved step by step from face-to-face to blended and online teaching, what students value in digitally enabled courses, and which e-SHE tools support this.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;76 min&quot;,&quot;video&quot;:&quot;https://bit.ly/CaseStudiesWebinar-ResourceSite&quot;,&quot;slides&quot;:&quot;https://bit.ly/CaseStudySlides-ResourceSite&quot;,&quot;resources&quot;:&quot;https://bit.ly/CaseStudyResources-ResourceSite&quot;,&quot;presenter&quot;:&quot;Elizabeth Gordon, Asst. Director, International Learning Technologies &amp; ID, and Kim Welch, Principal International ID and Trainer, EdPlus at ASU&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:&quot;Optional (after step 4)&quot;,&quot;title&quot;:&quot;Digital Accessibility and Inclusivity in Online Courses&quot;,&quot;summary&quot;:&quot;Learn accessibility and inclusivity practices that help online materials work for more learners.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;~75 min (est.)&quot;,&quot;video&quot;:&quot;https://bit.ly/DigitalAccessibilityandInclusivity_Recording&quot;,&quot;slides&quot;:null,&quot;resources&quot;:&quot;https://bit.ly/DigitalAccessibilityInclusivity_ResourcePage&quot;,&quot;presenter&quot;:&quot;Panel of Accessibility and Inclusivity Team at ASU&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:5.0,&quot;title&quot;:&quot;Coffee Talk: e-SHE Faculty Leading Digital Transformation&quot;,&quot;summary&quot;:&quot;Learn from faculty experiences leading digital transformation through e-SHE course work.&quot;,&quot;recommendation&quot;:&quot;Include: core&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:&quot;85 min&quot;,&quot;video&quot;:&quot;https://bit.ly/LearnFrome-SHEFaculty&quot;,&quot;slides&quot;:&quot;https://bit.ly/Learnfrome-SHEFacultyLeadingDigitalTransformationPresenationSlides&quot;,&quot;resources&quot;:null,&quot;presenter&quot;:&quot;ASU &amp; e-SHE Experts&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:&quot;Optional (after step 5)&quot;,&quot;title&quot;:&quot;Build AI Capacity: An Empathy-First Approach to Upskilling Faculty and Leaders&quot;,&quot;summary&quot;:&quot;Learn an empathy-first way to build AI skills in faculty and leaders: understand why people resist, give protected time, share examples from colleagues, and run hands-on workshops where people build something useful.&quot;,&quot;recommendation&quot;:&quot;Include: optional&quot;,&quot;viewing&quot;:&quot;~00:02-00:29&quot;,&quot;duration&quot;:&quot;50 min&quot;,&quot;video&quot;:&quot;https://bit.ly/Paul-Alvarado-YouTube-eSHE&quot;,&quot;slides&quot;:&quot;https://bit.ly/Paul-Alvarado-Slides-eSHE&quot;,&quot;resources&quot;:&quot;https://bit.ly/Resource-Paul-Alvarado-eSHE&quot;,&quot;presenter&quot;:&quot;Paul Alvarado, Associate Director of AI Programs and Analytics, ET Artificial Intelligence Teaching and Learning, ASU&quot;},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Course quality review (QM-style self-review) before launch&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid (self-review checklist) + short worked example.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Designing faculty development at scale (beyond AI)&quot;,&quot;summary&quot;:&quot;Proposed resource type: Case study of the e-SHE Master Class/ToT model.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Institutional e-learning and AI policy templates&quot;,&quot;summary&quot;:&quot;Proposed resource type: Job aid (policy template with annotated examples).&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null},{&quot;path&quot;:&quot;UL-4&quot;,&quot;name&quot;:&quot;Roll Out Digitally Enabled Courses Across Your University (e-SHE)&quot;,&quot;persona&quot;:&quot;University Leaders and Administrators&quot;,&quot;level&quot;:&quot;Introductory to intermediate (e-SHE-specific)&quot;,&quot;order&quot;:&quot;Supplemental&quot;,&quot;title&quot;:&quot;Learner onboarding to e-SHE&quot;,&quot;summary&quot;:&quot;Proposed resource type: Template (orientation module) + short student-facing video.&quot;,&quot;recommendation&quot;:&quot;Create new resource&quot;,&quot;viewing&quot;:null,&quot;duration&quot;:null,&quot;video&quot;:null,&quot;slides&quot;:null,&quot;resources&quot;:null,&quot;presenter&quot;:null}];
+      const root = document.getElementById(&#x27;eshe-learning-dashboard&#x27;);
+      const pathOrder = [...new Set(sourceRows.map(row =&gt; row.path))];
+      const topicPaths = {
+        all: pathOrder,
+        design: [&#x27;FI-1&#x27;],
+        assessment: [&#x27;FI-2&#x27;],
+        platform: [&#x27;FI-3&#x27;, &#x27;UL-4&#x27;],
+        media: [&#x27;FI-4&#x27;],
+        &#x27;ai-teaching&#x27;: [&#x27;FI-5&#x27;, &#x27;FI-6&#x27;],
+        programs: [&#x27;UL-1&#x27;],
+        &#x27;ai-leadership&#x27;: [&#x27;UL-2&#x27;, &#x27;UL-3&#x27;]
+      };
+      const pathMeta = new Map(pathOrder.map(id =&gt; {
+        const first = sourceRows.find(row =&gt; row.path === id);
+        return [id, { id, name: first.name, persona: first.persona, level: first.level }];
+      }));
+      const state = { persona: &#x27;all&#x27;, topic: &#x27;all&#x27;, query: &#x27;&#x27;, path: pathOrder[0], view: &#x27;core&#x27;, openItem: null, complete: new Set() };
+      const nav = root.querySelector(&#x27;#lp-path-nav&#x27;);
+      const list = root.querySelector(&#x27;#lp-list&#x27;);
+
+      const escapeHtml = value =&gt; String(value ?? &#x27;&#x27;).replace(/[&amp;&lt;&gt;&#x27;&quot;]/g, char =&gt; ({&#x27;&amp;&#x27;:&#x27;&amp;amp;&#x27;,&#x27;&lt;&#x27;:&#x27;&amp;lt;&#x27;,&#x27;&gt;&#x27;:&#x27;&amp;gt;&#x27;,&quot;&#x27;&quot;:&#x27;&amp;#39;&#x27;,&#x27;&quot;&#x27;:&#x27;&amp;quot;&#x27;}[char]));
+      const isCore = row =&gt; String(row.recommendation || &#x27;&#x27;).toLowerCase().startsWith(&#x27;include: core&#x27;);
+      const isProposed = row =&gt; String(row.recommendation || &#x27;&#x27;).toLowerCase().includes(&#x27;create new&#x27;);
+      const audienceKey = text =&gt; String(text).toLowerCase().includes(&#x27;university&#x27;) ? &#x27;leaders&#x27; : &#x27;faculty&#x27;;
+      const itemKey = (row, index) =&gt; `${row.path}-${row.order}-${index}`;
+      const minutes = row =&gt; {
+        const match = String(row.duration || &#x27;&#x27;).match(/(\d+)\s*min/i);
+        return match ? Number(match[1]) : 0;
+      };
+      const formatMinutes = total =&gt; total ? (total &gt;= 60 ? `${Math.floor(total / 60)} h ${total % 60 ? `${total % 60} min` : &#x27;&#x27;}`.trim() : `${total} min`) : &#x27;—&#x27;;
+      const typeLabel = row =&gt; isCore(row) ? `Step ${row.order}` : (isProposed(row) ? &#x27;Proposed resource&#x27; : String(row.order || &#x27;Optional&#x27;));
+
+      function filteredPaths() {
+        const allowedTopics = topicPaths[state.topic] || pathOrder;
+        return pathOrder.filter(id =&gt; allowedTopics.includes(id) &amp;&amp; (state.persona === &#x27;all&#x27; || audienceKey(pathMeta.get(id).persona) === state.persona));
+      }
+
+      function renderNav() {
+        const visible = filteredPaths();
+        if (!visible.includes(state.path)) state.path = visible[0] || null;
+        nav.innerHTML = visible.length ? visible.map(id =&gt; {
+          const path = pathMeta.get(id);
+          return `&lt;button class=&quot;lp-path-button&quot; type=&quot;button&quot; data-path=&quot;${escapeHtml(id)}&quot; aria-current=&quot;${id === state.path ? &#x27;page&#x27; : &#x27;false&#x27;}&quot;&gt;&lt;span class=&quot;lp-path-code&quot;&gt;${escapeHtml(id)}&lt;/span&gt;&lt;span class=&quot;lp-path-name&quot;&gt;${escapeHtml(path.name)}&lt;/span&gt;&lt;/button&gt;`;
+        }).join(&#x27;&#x27;) : &#x27;&lt;div class=&quot;lp-empty&quot;&gt;No paths match these filters.&lt;/div&gt;&#x27;;
+      }
+
+      function rowMarkup(row) {
+        const key = itemKey(row, sourceRows.indexOf(row));
+        const complete = state.complete.has(key);
+        const open = state.openItem === key;
+        const links = [
+          row.video ? `&lt;a class=&quot;lp-link&quot; href=&quot;${escapeHtml(row.video)}&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;i data-lucide=&quot;play&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Watch&lt;/a&gt;` : &#x27;&#x27;,
+          row.slides ? `&lt;a class=&quot;lp-more&quot; href=&quot;${escapeHtml(row.slides)}&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;i data-lucide=&quot;presentation&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Slides&lt;/a&gt;` : &#x27;&#x27;,
+          row.resources ? `&lt;a class=&quot;lp-more&quot; href=&quot;${escapeHtml(row.resources)}&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;i data-lucide=&quot;library&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Resources&lt;/a&gt;` : &#x27;&#x27;
+        ].join(&#x27;&#x27;);
+        const details = [
+          row.viewing ? `&lt;div&gt;&lt;strong&gt;Viewing note:&lt;/strong&gt; ${escapeHtml(row.viewing)}&lt;/div&gt;` : &#x27;&#x27;,
+          row.presenter &amp;&amp; row.presenter !== &#x27;Not listed&#x27; ? `&lt;div&gt;&lt;strong&gt;Presenter:&lt;/strong&gt; ${escapeHtml(row.presenter)}&lt;/div&gt;` : &#x27;&#x27;
+        ].join(&#x27;&#x27;);
+        const pathLabel = state.query ? `&lt;span class=&quot;lp-item-path&quot;&gt;${escapeHtml(row.path)} · ${escapeHtml(row.name)}&lt;/span&gt;` : &#x27;&#x27;;
+        return `&lt;article class=&quot;lp-item${complete ? &#x27; is-complete&#x27; : &#x27;&#x27;}${open ? &#x27; is-open&#x27; : &#x27;&#x27;}&quot; data-key=&quot;${escapeHtml(key)}&quot;&gt;
+          &lt;button class=&quot;lp-check&quot; type=&quot;button&quot; aria-pressed=&quot;${complete}&quot; aria-label=&quot;${complete ? &#x27;Mark incomplete&#x27; : &#x27;Mark complete&#x27;}&quot;&gt;&lt;i data-lucide=&quot;${complete ? &#x27;check&#x27; : &#x27;circle&#x27;}&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;div&gt;
+            &lt;p class=&quot;lp-item-type&quot;&gt;${escapeHtml(typeLabel(row))}${pathLabel}&lt;/p&gt;
+            &lt;h3&gt;${escapeHtml(row.title)}&lt;/h3&gt;
+            &lt;p class=&quot;lp-item-summary&quot;&gt;${escapeHtml(row.summary)}&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;span class=&quot;lp-item-duration&quot;&gt;${escapeHtml(row.duration || &#x27;&#x27;)}&lt;/span&gt;
+          &lt;div class=&quot;lp-item-actions&quot;&gt;
+            &lt;div class=&quot;lp-detail&quot;&gt;${details || &#x27;&lt;span&gt;Additional details are not listed.&lt;/span&gt;&#x27;}&lt;/div&gt;
+            &lt;div class=&quot;lp-links&quot;&gt;${links || &#x27;&lt;span class=&quot;lp-item-duration&quot;&gt;Resource in development&lt;/span&gt;&#x27;}&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/article&gt;`;
+      }
+
+      function renderSearch() {
+        const query = state.query.toLowerCase();
+        const allowed = filteredPaths();
+        const results = sourceRows.filter(row =&gt; allowed.includes(row.path) &amp;&amp; [row.title, row.summary, row.presenter, row.name].some(value =&gt; String(value || &#x27;&#x27;).toLowerCase().includes(query)));
+        root.querySelector(&#x27;#lp-path-code&#x27;).textContent = &#x27;Course search&#x27;;
+        root.querySelector(&#x27;#lp-title&#x27;).textContent = `Results for “${state.query}”`;
+        root.querySelector(&#x27;#lp-meta&#x27;).innerHTML = `&lt;span&gt;&lt;i data-lucide=&quot;search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;${results.length} matching ${results.length === 1 ? &#x27;course&#x27; : &#x27;courses&#x27;}&lt;/span&gt;`;
+        root.querySelector(&#x27;#lp-stats&#x27;).hidden = true;
+        root.querySelector(&#x27;#lp-progress-wrap&#x27;).hidden = true;
+        root.querySelector(&#x27;#lp-list-heading&#x27;).textContent = &#x27;Courses&#x27;;
+        root.querySelector(&#x27;#lp-view-switch&#x27;).hidden = true;
+        list.innerHTML = results.length ? results.map(rowMarkup).join(&#x27;&#x27;) : &#x27;&lt;div class=&quot;lp-empty&quot;&gt;No courses match your search and selected filters.&lt;/div&gt;&#x27;;
+        if (globalThis.lucide) lucide.createIcons({ attrs: { width: 16, height: 16 } });
+      }
+
+      function renderPath() {
+        if (state.query) {
+          renderSearch();
+          return;
+        }
+        if (!state.path) {
+          root.querySelector(&#x27;#lp-path-code&#x27;).textContent = &#x27;Learning paths&#x27;;
+          root.querySelector(&#x27;#lp-title&#x27;).textContent = &#x27;No paths found&#x27;;
+          root.querySelector(&#x27;#lp-meta&#x27;).innerHTML = &#x27;&#x27;;
+          root.querySelector(&#x27;#lp-stats&#x27;).hidden = true;
+          root.querySelector(&#x27;#lp-progress-wrap&#x27;).hidden = true;
+          root.querySelector(&#x27;#lp-list-heading&#x27;).textContent = &#x27;Learning sequence&#x27;;
+          root.querySelector(&#x27;#lp-view-switch&#x27;).hidden = true;
+          list.innerHTML = &#x27;&lt;div class=&quot;lp-empty&quot;&gt;Choose a different audience or topic.&lt;/div&gt;&#x27;;
+          return;
+        }
+        const meta = pathMeta.get(state.path);
+        const rows = sourceRows.filter(row =&gt; row.path === state.path);
+        const core = rows.filter(isCore);
+        const extras = rows.length - core.length;
+        const totalTime = core.reduce((sum, row) =&gt; sum + minutes(row), 0);
+        root.querySelector(&#x27;#lp-path-code&#x27;).textContent = meta.id;
+        root.querySelector(&#x27;#lp-title&#x27;).textContent = meta.name;
+        root.querySelector(&#x27;#lp-meta&#x27;).innerHTML = `&lt;span&gt;&lt;i data-lucide=&quot;users&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;${escapeHtml(meta.persona)}&lt;/span&gt;&lt;span&gt;&lt;i data-lucide=&quot;signal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;${escapeHtml(meta.level)}&lt;/span&gt;`;
+        root.querySelector(&#x27;#lp-core-count&#x27;).textContent = core.length;
+        root.querySelector(&#x27;#lp-time&#x27;).textContent = formatMinutes(totalTime);
+        root.querySelector(&#x27;#lp-resource-count&#x27;).textContent = extras;
+        root.querySelector(&#x27;#lp-stats&#x27;).hidden = false;
+        root.querySelector(&#x27;#lp-progress-wrap&#x27;).hidden = false;
+        root.querySelector(&#x27;#lp-list-heading&#x27;).textContent = &#x27;Learning sequence&#x27;;
+        root.querySelector(&#x27;#lp-view-switch&#x27;).hidden = false;
+
+        const shown = state.view === &#x27;core&#x27; ? core : rows;
+        list.innerHTML = shown.length ? shown.map(rowMarkup).join(&#x27;&#x27;) : &#x27;&lt;div class=&quot;lp-empty&quot;&gt;No resources match this view.&lt;/div&gt;&#x27;;
+        updateProgress();
+        if (globalThis.lucide) lucide.createIcons({ attrs: { width: 16, height: 16 } });
+      }
+
+      function updateProgress() {
+        const rows = sourceRows.filter(row =&gt; row.path === state.path &amp;&amp; isCore(row));
+        const completed = rows.filter(row =&gt; state.complete.has(itemKey(row, sourceRows.indexOf(row)))).length;
+        const percent = rows.length ? Math.round(completed / rows.length * 100) : 0;
+        root.querySelector(&#x27;#lp-progress-copy&#x27;).textContent = `${completed} of ${rows.length} complete`;
+        root.querySelector(&#x27;#lp-progress-bar&#x27;).style.width = `${percent}%`;
+        const track = root.querySelector(&#x27;.lp-progress&#x27;);
+        track.setAttribute(&#x27;aria-valuenow&#x27;, String(percent));
+      }
+
+      root.querySelector(&#x27;.lp-persona-switch&#x27;).addEventListener(&#x27;click&#x27;, event =&gt; {
+        const button = event.target.closest(&#x27;button[data-persona]&#x27;);
+        if (!button) return;
+        state.persona = button.dataset.persona;
+        root.querySelectorAll(&#x27;[data-persona]&#x27;).forEach(item =&gt; item.setAttribute(&#x27;aria-pressed&#x27;, String(item === button)));
+        renderNav();
+        renderPath();
+      });
+      root.querySelector(&#x27;.lp-topic-tabs&#x27;).addEventListener(&#x27;click&#x27;, event =&gt; {
+        const button = event.target.closest(&#x27;button[data-topic]&#x27;);
+        if (!button) return;
+        state.topic = button.dataset.topic;
+        root.querySelectorAll(&#x27;[data-topic]&#x27;).forEach(item =&gt; item.setAttribute(&#x27;aria-pressed&#x27;, String(item === button)));
+        state.openItem = null;
+        renderNav();
+        renderPath();
+      });
+      root.querySelector(&#x27;#lp-search-input&#x27;).addEventListener(&#x27;input&#x27;, event =&gt; {
+        state.query = event.target.value.trim();
+        state.openItem = null;
+        renderPath();
+      });
+      nav.addEventListener(&#x27;click&#x27;, event =&gt; {
+        const button = event.target.closest(&#x27;button[data-path]&#x27;);
+        if (!button) return;
+        state.path = button.dataset.path;
+        state.openItem = null;
+        renderNav();
+        renderPath();
+      });
+      root.querySelector(&#x27;.lp-view-switch&#x27;).addEventListener(&#x27;click&#x27;, event =&gt; {
+        const button = event.target.closest(&#x27;button[data-view]&#x27;);
+        if (!button) return;
+        state.view = button.dataset.view;
+        root.querySelectorAll(&#x27;[data-view]&#x27;).forEach(item =&gt; item.setAttribute(&#x27;aria-pressed&#x27;, String(item === button)));
+        state.openItem = null;
+        renderPath();
+      });
+      list.addEventListener(&#x27;click&#x27;, event =&gt; {
+        const item = event.target.closest(&#x27;.lp-item&#x27;);
+        if (!item) return;
+        if (event.target.closest(&#x27;.lp-check&#x27;)) {
+          state.complete.has(item.dataset.key) ? state.complete.delete(item.dataset.key) : state.complete.add(item.dataset.key);
+          renderPath();
+          return;
+        }
+        if (event.target.closest(&#x27;a&#x27;)) return;
+        state.openItem = state.openItem === item.dataset.key ? null : item.dataset.key;
+        renderPath();
+      });
+
+      renderNav();
+      renderPath();
+    })();
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>
